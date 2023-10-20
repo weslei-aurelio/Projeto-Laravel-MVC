@@ -14,14 +14,7 @@ class SeriesController extends Controller
             'Grey\'s Anatomy'
         ];
 
-
-        $html = '<ul>';
-        foreach($series as $serie){
-            $html .= "<li>$serie</li>";
-        }
-        $html .= '</ul>';
-
-        return $html;
+        return view('listar-series', compact('series'));
     }
 }
-/* parei na video aula: Lidando com Request e Response */ 
+/* parei na video aula: Conhecendo o Blade */   
