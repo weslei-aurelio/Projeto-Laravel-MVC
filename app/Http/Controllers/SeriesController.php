@@ -14,7 +14,18 @@ class SeriesController extends Controller
             'Grey\'s Anatomy'
         ];
 
-        return view('listar-series', compact('series'));
+        return view('series.index')->with('series', $series);
+    }
+
+    public function create(){
+
+        return view('series.create');
     }
 }
-/* parei na video aula: Conhecendo o Blade */   
+/* 
+
+    Parei na aula: Entendendo o conceito, Laravel Mix
+
+    ao baixar o projeto, não esquecer de clonar o arquivo .env e gerar a chave de seguranca com o comando: php artisan key:generate
+
+*/   
